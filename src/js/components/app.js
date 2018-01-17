@@ -3,13 +3,15 @@ import navbar from './navbar'
 import hero from './hero'
 import menu from './menu'
 import bottom from './bottom'
+import modal from './modal'
 
 export default function app(items = []) {
+    const modalEle = modal(items)
     const navbarEle = navbar();
     const heroEle = hero()
     const menuEle = menu(items)
     const bottomEle = bottom()
-    const appEle = addId( div(navbarEle, heroEle, menuEle, bottomEle), 'app-container')
+    const appEle = addId( div(modalEle, navbarEle, heroEle, menuEle, bottomEle), 'app-container')
     return appEle
 }
 

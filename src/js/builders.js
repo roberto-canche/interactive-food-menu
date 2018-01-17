@@ -52,6 +52,14 @@ export function footer(...children) {
     return createElement('footer', ...children)
 }
 
+export function ul(...children) {
+    return createElement('ul', ...children)
+}
+
+export function li(...children) {
+    return createElement('li', ...children)
+}
+
 export function img(source) {
     const image = createElement('img')
     image.src = source

@@ -10,6 +10,5 @@ export default function menuItem(itemData = {}) {
     const item = addClass(article(mediaContent), 'media', 'menu_item')
     item.dataset.key = itemData.id
     //data-key
-
     return item
 }
