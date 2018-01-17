@@ -32,6 +32,22 @@ export function p(...children) {
     return createElement('p', ...children)
 }
 
+export function h1(...children) {
+    return createElement('h1', ...children)
+}
+
+export function article(...children) {
+    return createElement('article', ...children)
+}
+
+export function h3(...children) {
+    return createElement('h3', ...children)
+}
+
+export function button(...children) {
+    return createElement('button', ...children)
+}
+
 export function img(source) {
     const image = createElement('img')
     image.src = source
