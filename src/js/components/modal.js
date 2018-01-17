@@ -8,6 +8,8 @@ export default function modal(items = []) {
     if(items.length === 0) {
         cart = p(text('El Carrito esta vacío.'))
     } else {
+        // const modalItems = items.map(modalItem)
+        // cart = addClass(ul(...modalItems), 'menu')
         cart =  addClass(ul(items.map(modalItem), 'menu'))
     }
 
