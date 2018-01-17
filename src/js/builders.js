@@ -48,6 +48,10 @@ export function button(...children) {
     return createElement('button', ...children)
 }
 
+export function footer(...children) {
+    return createElement('footer', ...children)
+}
+
 export function img(source) {
     const image = createElement('img')
     image.src = source
