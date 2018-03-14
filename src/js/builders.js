@@ -76,5 +76,3 @@ export function addId(element, id) {
     const newElement = element.cloneNode(true)
     return Object.assign(newElement, { id })
 }
-
-export function

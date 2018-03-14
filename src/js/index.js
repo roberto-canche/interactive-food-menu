@@ -12,10 +12,23 @@ function reducer(state, event, data) {
         case 'BAR':
             return Object.assign({}, state, data)
         break;
+
+        case 'SET_ITEMS':
+            return Object.assign( {}, state, {
+                items: data.items.reduce( (total, item) =>
+                Object.assign( {}, total, { [item.id]:item}), {}),
+            });
     
         default:
             return state
         break;
+        /*case 'SET_ITEMS':
+            return Object.assign( {}, state, {
+                items: data.items.reduce( (total, item) =>
+                Object.assign( {}, total, { [item.id]:item}), {}),
+            });
+        default:
+            return state*/
     }
 }
 
@@ -48,4 +61,5 @@ fetch('food.json')
     .then(resBody => {
         const body = document.querySelector('body')
         body.insertBefore(app(resBody), body.childNodes[0])
+        store.trigger('SET_ITEMS', { items: resBody })
     })
