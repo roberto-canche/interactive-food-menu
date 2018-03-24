@@ -3,7 +3,7 @@ export function text(words) {
 }
 
 export function createElement(type, ...children) {
-    const newElement = docuemtn.createElement(type)
+    const newElement = document.createElement(type)
     children.forEach( child => newElement.appendChild(child))
     return newElement
 }
